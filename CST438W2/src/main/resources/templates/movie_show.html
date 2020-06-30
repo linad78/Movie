@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="www.thymeleaf.org">
+<head>
+    <title>Movie</title>
+</head>
+<body>
+	<h2 th:inline="text">Hello [[${Movie.firstName}]] </h2>
+	
+	First name: <span th:inline="text"> [[${movie.firstName}]] </span> <br />
+	Last name: <span th:inline="text"> [[${movie.movieTitle}]] </span> <br /> 
+	Favorite food: <span th:inline="text"> [[${movie.movieRating}]] </span> <br /> 
+	
+</body>
+</html>
