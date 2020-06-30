@@ -14,6 +14,7 @@ public class Movie {
 	@Autowired
 	MovieRepository movieRepository;
 
+	// I believe the assignment wanted movies to be the REST api url
 	@GetMapping("/movie/new")
 	public String createMovie(Model model) {
 		
@@ -36,6 +37,7 @@ public class Movie {
 	}
 	@GetMapping("/movie")
 	public String getAllMovie(Model model) {
+		// This isn't going to return sorted Movies as specified
 		Iterable<Movie_rating> title=movieRepository.findAll();
 		model.addAttribute("movies", title);
 		return "movie_list";

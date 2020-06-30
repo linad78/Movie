@@ -14,14 +14,22 @@ public class Movie_rating {
 	
 	@NotNull
 	@Size(min=3,max=25)
-	
+
 	private String firstName;
 	@NotNull
 	@Size(min=3,max=25)
 	private String movieTitle;
+
+
+	//Should movieRating be an integer and not a string?
 	@NotNull
 	@Size(min=1,max=5)
 	private String movieRating;
+
+
+	//I believe you're missing the date field
+	// The assignment had a date to be generated and stored when entereed
+	// you sort by this date when you display all ratings
 	
 	public Movie_rating(){
 		
