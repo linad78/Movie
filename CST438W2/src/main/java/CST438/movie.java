@@ -14,14 +14,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class movie {
 	@Autowired
 	movieRepository movieRepository;
-	@GetMapping("/hello")
- public String hello(@RequestParam("name,title,rating")String name,String title,String rating, Model model) {
-		model.addAttribute("name",name);
-		model.addAttribute("title",title);
-		model.addAttribute("rating",rating);
-		model.addAttribute("time", new java.util.Date().toString());
-		return "index";
-  }
+
 	@GetMapping("/movie/new")
 	public String createMovie(Model model) {
 		
